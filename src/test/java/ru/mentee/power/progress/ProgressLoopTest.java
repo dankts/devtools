@@ -14,9 +14,9 @@ class ProgressLoopTest {
         var mentee3 = new Mentee("Пётр", "Новосибирск", "Стать Senior", 12, 12);
         Mentee[] mentees = {mentee1, mentee2, mentee3};
 
-        int remainingTotal = ProgressTracker.calculateTotalProgress(mentees);
+        String messageResult = ProgressTracker.calculateTotalProgress(mentees);
 
-        assertThat(11).isEqualTo(remainingTotal);
+        assertThat(messageResult).contains("пройдено 25 из 36 уроков").contains("осталось 11 уроков");
     }
 
     @Test
@@ -25,9 +25,9 @@ class ProgressLoopTest {
         var mentee2 = new Mentee("Мария", "Анапа", "Повысить зарплату", 12, 12);
         Mentee[] mentees = {mentee1, mentee2};
 
-        int remainingTotal = ProgressTracker.calculateTotalProgress(mentees);
+        String messageResult = ProgressTracker.calculateTotalProgress(mentees);
 
-        assertThat(0).isEqualTo(remainingTotal);
+        assertThat(messageResult).contains("пройдено 24 из 24 уроков").contains("осталось 0 уроков");
     }
 
     @Test
