@@ -49,9 +49,9 @@ MenteeProgress.java - record, для представления прогресс
 1. Установите breakpoint на строке цикла while в ProgressTracker.calculateProgress
 2. Запустите Debug: кликните правой кнопкой на main → Debug 'ProgressTracker.main()'
 3. Используйте Step Over (F8) для прохождения итераций
-4. Проверьте Variables: counter, remainingHours должны изменяться корректно
-5. Используйте Evaluate Expression (Alt+F8): вычислите remainingLessons * 2
-6. Ожидаемый результат Evaluate: 14 (для completedLessons=5, totalLessons=12)
+4. Проверьте Variables: index, remainingTotal должны изменяться корректно
+5. Используйте Evaluate Expression (Alt+F8): вычислите remainingTotal * 2
+6. Ожидаемый результат Evaluate: 14 (для completedTotal=5, totalTotal=12)
 ### Что делать при ошибках
 1. Если вывод некорректен: проверьте логику цикла через Debug
 2. Если тесты красные: откройте вывод теста, найдите AssertionError, скорректируйте метод
