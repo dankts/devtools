@@ -38,4 +38,25 @@ class StudentListTest {
     assertThat(result).contains(student1);
     assertThat(result).doesNotContain(student2);
   }
+
+  @Test
+  void getStudentsListEmpty_whenCityNotFound() {
+    Student student1 = new Student("Alexey", "Moscow");
+    Student student2 = new Student("Maria", "Novosibirsk");
+
+    studentList.addStudent(student1);
+    studentList.addStudent(student2);
+
+    List<Student> result = studentList.getStudentsByCity("Vladimir");
+    assertThat(result).isEmpty();
+    assertThat(result).doesNotContain(student1);
+    assertThat(result).doesNotContain(student2);
+  }
+
+  @Test
+  void shouldReturnEmptyList_whenListIsEmpty() {
+    StudentList studentList = new StudentList();
+    List<Student> result = studentList.getStudentsByCity("Moscow");
+    assertThat(result).isEmpty();
+  }
 }
