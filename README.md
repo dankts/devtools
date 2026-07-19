@@ -1,3 +1,5 @@
+[![.github/workflows/ci.yml](https://github.com/dankts/devtools/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/dankts/devtools/actions/workflows/ci.yml)
+
 ##  Quick Start
 ./gradlew run - запуск программы
 
