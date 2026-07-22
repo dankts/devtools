@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v8
+        uses: actions/checkout@v7
 
       - name: Make Gradlew executable
         run: chmod +x gradlew
@@ -27,7 +27,7 @@ jobs:
           cache: 'gradle'
 
       - name: Run checkstyle
-        run: ./gradlew --no-daemon checkstyleMain
+        run: ./gradlew --no-daemon checkstyleMain checkstyleTest
 
       - name: Run tests
         run: ./gradlew --no-daemon test
